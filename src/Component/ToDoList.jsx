@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
@@ -5,16 +6,20 @@ import Button from 'react-bootstrap/Button';
 export default function ToDoList({chores, setChores}) {
     console.log(chores.id)
 
-    function buttonChange(event, choresid){
+    function buttonChange(event, choresId){
         console.log(event)
-        console.log(chores.id)
+        console.log(choresId)
+        <tr>
+          <td><Button variant="success">Success</Button></td>
+        </tr>
+
     }
     
-    function removeTask(event, choresid){
+    function removeTask(event, choresId){
         console.log(event)
-        console.log(chores.id)
-        const Updatess = chores.filter(chore=>chore.id!==choresid)
-        setChores=(Updatess)
+        console.log(choresId)
+        const Update = chores.filter(chore=>chore.id!==choresId)
+        setChores (Update)
 
 
     }
@@ -42,7 +47,7 @@ export default function ToDoList({chores, setChores}) {
                     <td>{chore.Time}</td>
                     <td>{chore.Date}</td>
                     <td><Button variant="warning"  onClick= {(event) =>buttonChange(event,chore.id)}> Incomplete</Button></td>
-                    <td><Button variant="danger" onClick={(event) =>removeTask(event,chores.id)}>Remove</Button></td>
+                    <td><Button variant="danger" onClick={(event) =>removeTask(event,chore.id)}>Remove</Button></td>
                 </tr>
             ))}
             
