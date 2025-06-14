@@ -8,11 +8,12 @@ function ColorSchemesExample() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">Organizer</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#features">To Do List</Nav.Link>
+            <Nav.Link href="#pricing">History</Nav.Link>
+            <Nav.Link href="#pricing">Contact Us</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

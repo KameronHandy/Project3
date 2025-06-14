@@ -1,36 +1,51 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 export default function ToDoList({chores, setChores}) {
-    console.log(chores)
-  return (
+    console.log(chores.id)
+
+    function buttonChange(event, choresid){
+        console.log(event)
+        console.log(chores.id)
+    }
+    
+    function removeTask(event, choresid){
+        console.log(event)
+        console.log(chores.id)
+        const Updatess = chores.filter(chore=>chore.id!==choresid)
+        setChores=(Updatess)
+
+
+    }
+
+
+    return (
         <Table striped bordered hover>
           <thead>
             <tr>
               <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
+              <th>Importance</th>
+              <th>Task</th>
+              <th>When to be completed</th>
+              <th>Date</th>
+              <th>Completion Status</th>
+              <th>Remove Task</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td colSpan={2}>Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            {chores.map((chore,index)=>(
+                <tr>
+                    <td>{index+1}</td>
+                    <td>{chore.Importance}</td>
+                    <td>{chore.task}</td>
+                    <td>{chore.Time}</td>
+                    <td>{chore.Date}</td>
+                    <td><Button variant="warning"  onClick= {(event) =>buttonChange(event,chore.id)}> Incomplete</Button></td>
+                    <td><Button variant="danger" onClick={(event) =>removeTask(event,chores.id)}>Remove</Button></td>
+                </tr>
+            ))}
+            
           </tbody>
         </Table>
       );
