@@ -9,9 +9,6 @@ export default function ToDoList({chores, setChores}) {
     function buttonChange(event, choresId){
         console.log(event)
         console.log(choresId)
-        <tr>
-          <td><Button variant="success">Success</Button></td>
-        </tr>
 
     }
     
