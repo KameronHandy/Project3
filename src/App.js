@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import ToDoList from './Component/ToDoList';
 import Header from './Component/Header';
+import SearchBar from './Component/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
     < Header/>
+    <SearchBar chores={chores} setChores={setChores}/>
     <ToDoList chores={chores} setChores={setChores} />
     
     </>
