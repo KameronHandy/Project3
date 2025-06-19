@@ -1,10 +1,17 @@
 import React from 'react'
+import {useStates} from 'react'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function AddingChores() {
+
+
+
+
+
+export default function AddingChores(chores,setChores) {
   return (        
         <>
+
           <Form.Control type="text" placeholder="Task" />
           <br />        
 
