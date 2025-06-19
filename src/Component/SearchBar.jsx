@@ -18,11 +18,12 @@ export default function SearchBar({chores,setChores}) {
     
     <InputGroup className="mb-3">
     <Form.Control
+    placeholder="Chore Lookup"
     name = "search"
     onChange={(event)=>(setSearchState(event.target.value))}
     />
     <Button variant="outline-secondary" id="button-addon2" onClick={(SearchButton)}>
-      Chore Lookup
+      Submit
     </Button>
   </InputGroup>
   )

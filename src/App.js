@@ -4,6 +4,7 @@ import ToDoList from './Component/ToDoList';
 import Header from './Component/Header';
 import SearchBar from './Component/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AddingChores from './Component/AddingChores';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     < Header/>
     <SearchBar chores={chores} setChores={setChores}/>
     <ToDoList chores={chores} setChores={setChores} />
+    <AddingChores chores={chores} setCores={setChores}/>
     
     </>
 
