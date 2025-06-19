@@ -28,9 +28,19 @@ export default function AddingChores({chores, setChores}) {
         setChores([...chores, formData])
     }
 
+    
+      const [selectedCity, setSelectedCity] = useState(null);
+      const Importance = [
+          { name: 'New York'},
+          { name: 'Rome' },
+          { name: 'London' },
+          { name: 'Istanbul' },
+          { name: 'Paris' }
+      ];
+
   return (        
         <>
-
+        
           <Form.Control type="text" placeholder="Task" name="task" onChange={(event)=>handleChange(event)}/>
           <br />        
 
