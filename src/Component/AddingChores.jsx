@@ -2,6 +2,8 @@ import React from 'react'
 import {useState} from 'react'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 
@@ -11,7 +13,7 @@ import Button from 'react-bootstrap/Button';
 export default function AddingChores({chores, setChores}) {
 
     const [formData, setFormData]= useState({
-
+        Importance:"",
         task : "",
         Time : "",
         Date : ""
@@ -28,19 +30,23 @@ export default function AddingChores({chores, setChores}) {
         setChores([...chores, formData])
     }
 
+    function DropDownSelect(event){
+      console.log(event)
+
+
+    }
+
     
-      const [selectedCity, setSelectedCity] = useState(null);
-      const Importance = [
-          { name: 'New York'},
-          { name: 'Rome' },
-          { name: 'London' },
-          { name: 'Istanbul' },
-          { name: 'Paris' }
-      ];
 
   return (        
         <>
         
+          <DropdownButton value="" onClick={DropDownSelect} options=""  id="dropdown-basic-button" title="Importance">
+            <Dropdown.Item options="high" name="Importance" >High</Dropdown.Item>
+            <Dropdown.Item options="mid" name="Importance" >Mid</Dropdown.Item>
+            <Dropdown.Item options="low" name="Importance" >Low</Dropdown.Item>
+          </DropdownButton>
+          <br />
           <Form.Control type="text" placeholder="Task" name="task" onChange={(event)=>handleChange(event)}/>
           <br />        
 
