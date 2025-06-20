@@ -44,7 +44,7 @@ export default function AddingChores({chores, setChores}) {
             <Form.Group as={Col} controlId="formGridState">
               <Form.Label>State</Form.Label>
               <Form.Select defaultValue="Choose...">
-                <option>High</option>
+                <option value="High" name="Importance">High</option>
                 <option>Mid</option>
                 <option>Low</option>
               </Form.Select>
