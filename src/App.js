@@ -5,7 +5,11 @@ import Header from './Component/Header';
 import SearchBar from './Component/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddingChores from './Component/AddingChores';
-import DropDown from './Component/DropDown';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ContactUs from './Pages/ContactUs';
+import Homepage from './Pages/HomePage';
+import Organizer from './Pages/Organizer';
+import History from './Pages/History'
 
 
 
@@ -22,11 +26,18 @@ function App() {
 
   return (
     <>
+
     < Header/>
-    <SearchBar chores={chores} setChores={setChores}/>
-    <ToDoList chores={chores} setChores={setChores} />
-    <DropDown/>
-    <AddingChores chores={chores} setChores={setChores}/>
+
+    <BrowserRouter>
+      <Routes>
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/History" element ={<History/>}/>
+          <Route path="Organizer" element ={<Organizer/>}/>
+      </Routes>
+    </BrowserRouter>
+
     
     </>
 

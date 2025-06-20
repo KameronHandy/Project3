@@ -10,10 +10,10 @@ function ColorSchemesExample() {
         <Container>
           <Navbar.Brand href="#home">Organizer</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">To Do List</Nav.Link>
-            <Nav.Link href="#pricing">History</Nav.Link>
-            <Nav.Link href="#pricing">Contact Us</Nav.Link>
+            <Nav.Link href="/Home">Home</Nav.Link>
+            <Nav.Link href="/Organizer">To Do List</Nav.Link>
+            <Nav.Link href="/History">History</Nav.Link>
+            <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
