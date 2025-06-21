@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import HistoryLog from '../Component/HistoryLog'
+import SearchBar from '../Component/SearchBar'
 
 export default function History() {
 
@@ -12,6 +13,9 @@ export default function History() {
   ])
 
   return (
+    <>
+    <SearchBar chores={chores} setChores={setChores}/>
     <HistoryLog chores={chores} setChores={setChores} />
+    </>
   )
 }

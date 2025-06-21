@@ -67,14 +67,15 @@ function addContact(){
               name="Email"
               onChange={(event)=>handleChange(event)}
             />
-            <InputGroup.Text onChange={(event)=>handleChange(event)}>@example.com</InputGroup.Text>
+
           </InputGroup>
 
     
           <InputGroup>
-            <InputGroup.Text>With textarea</InputGroup.Text>
+            <InputGroup.Text>Comments</InputGroup.Text>
             <Form.Control as="textarea" aria-label="Comments" name="Text" onChange={(event)=>handleChange(event)}/>
           </InputGroup>
+          <br />
 
           <Button variant="warning" onClick={addContact}>Submit</Button>
         </>

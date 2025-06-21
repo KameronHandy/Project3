@@ -21,6 +21,13 @@ export default function ToDoList({chores, setChores}) {
 
     }
 
+      const [buttonText, setButtonText] = useState('Incomplete');
+    
+    function handleClicks(){
+      
+        setButtonText(buttonText === 'Incomplete' ? 'Complete' : 'Incomplete');
+      };
+
 
     return (
         <Table striped bordered hover>
@@ -43,7 +50,7 @@ export default function ToDoList({chores, setChores}) {
                     <td>{chore.task}</td>
                     <td>{chore.Time}</td>
                     <td>{chore.Date}</td>
-                    <td><Button variant="warning"  onClick= {(event) =>buttonChange(event,chore.id)}> Incomplete</Button></td>
+                    <td><Button variant="warning"  onClick= {(event) =>handleClicks(event,chore.id)}> {buttonText}</Button></td>
                     <td><Button variant="danger" onClick={(event) =>removeTask(event,chore.id)}>Remove</Button></td>
                 </tr>
             ))}
@@ -53,3 +60,9 @@ export default function ToDoList({chores, setChores}) {
       );
     }
     
+ 
+    
+
+    
+
+
